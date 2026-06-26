@@ -1,1 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#786a58"/><stop offset="1" stop-color="#071827"/></linearGradient><pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M0 80 80 0M-20 20 20-20M60 100 100 60" stroke="#d4aa55" stroke-opacity=".18" stroke-width="6"/></pattern></defs><rect width="1200" height="760" fill="url(#g)"/><rect width="1200" height="760" fill="url(#p)"/><g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="10"><path d="M110 590h980M170 590V390h190v200M450 590V250h300v340M840 590V330h190v260"/><path d="M120 390h1040M210 340l110-130 110 130M790 330l150-170 150 170"/></g><text x="90" y="120" font-family="Arial" font-size="52" font-weight="900" fill="#fff">OCO Construction</text><text x="90" y="180" font-family="Arial" font-size="30" fill="#d4aa55">Residential</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#786a58" />
+      <stop offset="1" stop-color="#071827" />
+    </linearGradient>
+    <pattern id="p" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path
+        d="M0 80 80 0M-20 20 20-20M60 100 100 60"
+        stroke="#d4aa55"
+        stroke-opacity=".18"
+        stroke-width="6"
+      />
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#g)" />
+  <rect width="1200" height="760" fill="url(#p)" />
+  <g fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="10">
+    <path
+      d="M110 590h980M170 590V390h190v200M450 590V250h300v340M840 590V330h190v260"
+    />
+    <path d="M120 390h1040M210 340l110-130 110 130M790 330l150-170 150 170" />
+  </g>
+  <text
+    x="90"
+    y="120"
+    font-family="Arial"
+    font-size="52"
+    font-weight="900"
+    fill="#fff"
+  >
+    OCO Construction
+  </text>
+  <text x="90" y="180" font-family="Arial" font-size="30" fill="#d4aa55">
+    Residential
+  </text>
+</svg>
