@@ -101,11 +101,6 @@ function card(p) {
           <div><b>Size / Scope</b>${esc(p.size)}</div>
           <div><b>Status</b>${esc(p.status)}</div>
         </div>
-      //  <p class="folder-note">
-      //    <b>Asset folder:</b><br>
-      //    ${esc(p.folder)}photos/<br>
-      //    ${esc(p.folder)}videos/
-      //  </p>
       </div>
     </article>
   `;
