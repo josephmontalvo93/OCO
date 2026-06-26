@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCO Construction | Completed Projects</title>
+<style>
+:root{
+  --navy:#0b1f35;--navy-2:#122b47;--gold:#d4af37;--gold-2:#e1bf58;
+  --light:#f4f6f8;--white:#ffffff;--text:#202a33;--muted:#6b7680;
+  --line:rgba(11,31,53,.10);--shadow:0 12px 34px rgba(0,0,0,.10)
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.topbar{background:var(--navy);color:rgba(255,255,255,.78);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;padding:.7rem 6vw;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid rgba(11,31,53,.08);padding:1rem 6vw;display:flex;justify-content:space-between;align-items:center}
+.brand{display:flex;align-items:center;gap:.85rem}
+.mark{width:52px;height:52px;border-radius:10px;display:grid;place-items:center;font-weight:900;letter-spacing:-.08em;background:var(--navy);color:#fff;border:2px solid var(--gold)}
+.brand h1{font-size:1.35rem;letter-spacing:.13em;line-height:1;color:var(--navy)}
+.brand span{display:block;font-size:.72rem;color:var(--gold);letter-spacing:.36em;margin-top:.25rem}
+nav{display:flex;gap:1.3rem;align-items:center;flex-wrap:wrap;font-size:.82rem;text-transform:uppercase;letter-spacing:.11em;color:var(--navy)}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.82rem 1.15rem;border-radius:999px;background:var(--gold);color:var(--navy);font-weight:800;text-transform:uppercase;letter-spacing:.09em;font-size:.78rem;border:1px solid transparent;cursor:pointer}
+.btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.hero{background:linear-gradient(115deg, rgba(11,31,53,.96), rgba(11,31,53,.78)),url('https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1800&q=80') center/cover;color:#fff;padding:6.5rem 6vw 5.5rem}
+.hero h2{font-size:clamp(2.8rem,6vw,5rem);line-height:.98;letter-spacing:-.04em;margin-bottom:1rem}
+.hero p{max-width:780px;color:rgba(255,255,255,.82);font-size:1.08rem;margin-bottom:1.6rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.container{max-width:1240px;margin:auto;padding:4.5rem 20px 5rem}
+.section-head{max-width:820px;margin-bottom:2rem}
+.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-weight:800;font-size:.82rem;margin-bottom:.9rem}
+.section-head h3{font-size:clamp(2rem,4vw,3.1rem);line-height:1.04;letter-spacing:-.04em;color:var(--navy);margin-bottom:.9rem}
+.section-head p{color:var(--muted)}
+.editor-note{background:#fff;border:1px solid var(--line);border-left:5px solid var(--gold);border-radius:14px;padding:18px 20px;margin:0 0 28px;box-shadow:0 8px 24px rgba(11,31,53,.06)}
+.editor-note strong{display:block;color:var(--navy);margin-bottom:6px}
+.editor-note code{background:#f0f2f4;padding:2px 6px;border-radius:5px}
+.toolbar{display:flex;justify-content:space-between;gap:1rem;align-items:center;margin-bottom:26px;flex-wrap:wrap}
+.filters{display:flex;gap:.65rem;flex-wrap:wrap}
+.filter-btn{border:1px solid var(--line);background:#fff;color:var(--navy);padding:.7rem .95rem;border-radius:999px;font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:.75rem;cursor:pointer}
+.filter-btn.active,.filter-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.search{min-width:min(360px,100%);padding:.82rem 1rem;border-radius:999px;border:1px solid var(--line);font-size:.95rem;background:#fff}
+.results-count{font-weight:800;color:var(--navy);margin-bottom:16px;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.card{background:var(--white);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transition:.22s;border:1px solid rgba(11,31,53,.06)}
+.card:hover{transform:translateY(-6px)}
+.project-image{height:230px;display:flex;align-items:center;justify-content:center;color:#fff;position:relative;background-size:cover;background-position:center}
+.project-image::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(11,31,53,.88),rgba(11,31,53,.35))}
+.project-image span{position:relative;z-index:1;color:var(--gold-2);font-size:1.85rem;font-weight:900;letter-spacing:.05em;text-align:center;padding:0 18px}
+.content{padding:22px}
+.tag{display:inline-block;background:rgba(212,175,55,.16);color:var(--navy);padding:6px 12px;border-radius:30px;font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+h4{margin:14px 0 8px;font-size:1.3rem;color:var(--navy)}
+.content p{color:var(--muted)}
+.meta{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px;border-top:1px solid #e2e8ee;padding-top:16px}
+.meta div{font-size:.86rem}
+.meta b{display:block;color:var(--navy);font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+.no-results{display:none;background:#fff;border:1px solid var(--line);border-radius:18px;padding:30px;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:70px 20px;margin-top:10px}
+.cta p{color:rgba(255,255,255,.76);margin:.8rem 0 1.6rem}
+footer{background:#081524;color:#aaa;padding:30px 6vw;display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
+footer a{color:#d2d8df}
+@media(max-width:760px){
+  header,.topbar,.hero{padding-left:4vw;padding-right:4vw}
+  nav{display:none}
+  .meta{grid-template-columns:1fr}
+  .toolbar{display:block}
+  .filters{margin-bottom:1rem}
+}
+</style>
+</head>
+<body>
+  <div class="topbar"><div>Rio Grande Valley, Texas</div><div>Completed Work • Portfolio • OCO Construction</div></div>
+  <header>
+    <a class="brand" href="oco_home_updateable.html" aria-label="OCO Construction home">
+      <div class="mark">OCO</div>
+      <div><h1>OCO</h1><span>CONSTRUCTION</span></div>
+    </a>
+    <nav>
+      <a href="oco_home_updateable.html">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="btn">Start a Project</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Completed Projects</div>
+    <h2>Building the Rio Grande Valley one project at a time.</h2>
+    <p>This portfolio page is built so future completed projects can be added by editing one project list near the bottom of this HTML file. The page automatically creates the cards, filters, search behavior, and project count.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#projects">Browse Projects</a>
+      <a class="btn secondary" href="oco_home_updateable.html">Back to Home</a>
+    </div>
+  </section>
+
+  <main class="container" id="projects">
+    <div class="section-head">
+      <div class="eyebrow">Portfolio</div>
+      <h3>Featured completed work.</h3>
+      <p>Use the filters or search box to sort completed projects by sector, city, description, year, or project name.</p>
+    </div>
+
+    <div class="editor-note">
+      <strong>Future update method</strong>
+      To add a new completed project, open this HTML file, search for <code>EDIT PROJECTS HERE</code>, copy the sample project object, and update the text fields. No card layout editing is required.
+    </div>
+
+    <div class="toolbar">
+      <div class="filters" id="filters"></div>
+      <input class="search" id="searchInput" type="search" placeholder="Search by project, city, year, or sector..." aria-label="Search completed projects">
+    </div>
+
+    <div class="results-count" id="resultsCount"></div>
+    <div class="grid" id="projectGrid"></div>
+    <div class="no-results" id="noResults">No projects match the current filter or search term.</div>
+  </main>
+
+  <section class="cta" id="contact">
+    <h3>Ready to start your project?</h3>
+    <p>Navigate back to the main website or contact OCO Construction to discuss residential, commercial, industrial, or infrastructure work.</p>
+    <div class="hero-actions" style="justify-content:center">
+      <a class="btn" href="oco_home_updateable.html">Go to Home Page</a>
+      <a class="btn secondary" href="mailto:info@ococonstruction.com">info@ococonstruction.com</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 OCO Construction • Rio Grande Valley, Texas</div>
+    <div><a href="oco_home_updateable.html">Home</a> | <a href="oco_completed_projects_updateable.html">Completed Projects</a></div>
+  </footer>
+
+<script>
+/* ==========================================================
+   EDIT PROJECTS HERE
+
+   To add a future completed project:
+   1. Copy one full project block below.
+   2. Paste it before the closing ];
+   3. Change the title, category, location, year, size, description, etc.
+   4. Optional: replace image with a real project photo URL.
+   5. Save the file.
+
+   Keep the comma after each project block except the last one.
+   ========================================================== */
+
+const completedProjects = [
+  {
+    title: "Modern Luxury Residence",
+    category: "Residential",
+    type: "Custom Home",
+    location: "Mission, TX",
+    year: "2026",
+    size: "4,200 sq ft",
+    status: "Completed",
+    description: "Custom residence featuring energy-efficient construction, premium finishes, and a hurricane-conscious design approach.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Retail Plaza Development",
+    category: "Commercial",
+    type: "Retail Development",
+    location: "McAllen, TX",
+    year: "2026",
+    size: "42,000 sq ft",
+    status: "Completed",
+    description: "Multi-tenant retail center including site work, utilities, parking, storefront systems, and finished tenant-ready spaces.",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Roadway Reconstruction",
+    category: "Infrastructure",
+    type: "Roadwork",
+    location: "Rio Grande Valley, TX",
+    year: "2026",
+    size: "2.3 miles",
+    status: "Completed",
+    description: "Full-depth pavement replacement with drainage improvements, sidewalks, traffic control, and utility coordination.",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Warehouse Expansion",
+    category: "Industrial",
+    type: "Industrial Addition",
+    location: "Edinburg, TX",
+    year: "2026",
+    size: "85,000 sq ft",
+    status: "Completed",
+    description: "Steel-framed industrial addition with loading docks, warehouse storage, front-office buildout, and utility upgrades.",
+    image: "https://images.unsplash.com/photo-1581093806997-124204d9fa9d?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Public Facility Renovation",
+    category: "Municipal",
+    type: "Government Renovation",
+    location: "Rio Grande Valley, TX",
+    year: "2026",
+    size: "Interior / Exterior",
+    status: "Completed",
+    description: "Interior and exterior renovation including ADA upgrades, building system improvements, and energy-efficient retrofits.",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    title: "Your Next Success Story",
+    category: "Future Project",
+    type: "Placeholder",
+    location: "South Texas",
+    year: "Future",
+    size: "TBD",
+    status: "Planning",
+    description: "Replace this placeholder with a real project profile, testimonial, drone footage link, and construction metrics.",
+    image: ""
+  }
+
+  /* COPY THIS TEMPLATE FOR A NEW PROJECT:
+
+  ,
+  {
+    title: "Project Name Here",
+    category: "Commercial",
+    type: "Retail / Office / Warehouse / Roadwork / Custom Home",
+    location: "City, TX",
+    year: "2027",
+    size: "00,000 sq ft",
+    status: "Completed",
+    description: "Short 1–2 sentence project description.",
+    image: "https://your-photo-link-here.com/project-photo.jpg"
+  }
+
+  */
+];
+
+/* Do not edit below this line unless changing the page design or behavior. */
+
+const grid = document.getElementById("projectGrid");
+const filters = document.getElementById("filters");
+const searchInput = document.getElementById("searchInput");
+const resultsCount = document.getElementById("resultsCount");
+const noResults = document.getElementById("noResults");
+
+let activeCategory = "All";
+
+function escapeHTML(value) {
+  return String(value || "").replace(/[&<>"']/g, function(char) {
+    return ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    })[char];
+  });
+}
+
+function buildFilters() {
+  const categories = ["All", ...new Set(completedProjects.map(project => project.category))];
+
+  filters.innerHTML = categories.map(category => `
+    <button class="filter-btn ${category === activeCategory ? "active" : ""}" data-category="${escapeHTML(category)}">
+      ${escapeHTML(category)}
+    </button>
+  `).join("");
+
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      activeCategory = button.dataset.category;
+      buildFilters();
+      renderProjects();
+    });
+  });
+}
+
+function projectMatchesSearch(project, searchTerm) {
+  if (!searchTerm) return true;
+  const searchableText = [
+    project.title,
+    project.category,
+    project.type,
+    project.location,
+    project.year,
+    project.size,
+    project.status,
+    project.description
+  ].join(" ").toLowerCase();
+
+  return searchableText.includes(searchTerm.toLowerCase());
+}
+
+function renderProjects() {
+  const searchTerm = searchInput.value.trim();
+  const visibleProjects = completedProjects.filter(project => {
+    const categoryMatch = activeCategory === "All" || project.category === activeCategory;
+    return categoryMatch && projectMatchesSearch(project, searchTerm);
+  });
+
+  resultsCount.textContent = `${visibleProjects.length} project${visibleProjects.length === 1 ? "" : "s"} shown`;
+
+  grid.innerHTML = visibleProjects.map(project => {
+    const imageStyle = project.image
+      ? `background-image:url('${escapeHTML(project.image)}')`
+      : "";
+
+    return `
+      <article class="card">
+        <div class="project-image" style="${imageStyle}">
+          <span>${escapeHTML(project.category)}</span>
+        </div>
+        <div class="content">
+          <span class="tag">${escapeHTML(project.type)}</span>
+          <h4>${escapeHTML(project.title)}</h4>
+          <p>${escapeHTML(project.description)}</p>
+          <div class="meta">
+            <div><b>Location</b>${escapeHTML(project.location)}</div>
+            <div><b>Year</b>${escapeHTML(project.year)}</div>
+            <div><b>Size / Scope</b>${escapeHTML(project.size)}</div>
+            <div><b>Status</b>${escapeHTML(project.status)}</div>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  noResults.style.display = visibleProjects.length ? "none" : "block";
+}
+
+searchInput.addEventListener("input", renderProjects);
+
+buildFilters();
+renderProjects();
+</script>
+</body>
+</html>
