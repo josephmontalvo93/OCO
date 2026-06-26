@@ -55,6 +55,20 @@ const projects = [
     folder: "projects/future/rgv-infrastructure-corridor/",
     url: "projects.html#rgv-infrastructure-corridor",
   },
+  {
+    title: "Church Water Retention Pond",
+    category: "Completed",
+    sector: "Commercial",
+    location: "Rio Grande Valley, TX",
+    year: "2026",
+    size: "TBD",
+    status: "Completed",
+    description:
+      "Custom water retention pond built for local church.",
+    image: "projects/completed/church-retention-pond/photos/church-retention-pond_construction.jpeg",
+    folder: "projects/completed/church-retention-pond/",
+    url: "projects.html#church-retention-pond",
+  },
 ];
 function esc(v) {
   return String(v || "").replace(
